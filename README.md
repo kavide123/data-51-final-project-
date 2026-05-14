@@ -1,0 +1,1 @@
+Good Day professor,  This App records , displays and update   doctor's appointments . It allows you to list the status of the appointments and the reason for visits. This app also allows you to search for appointments for the database. 
