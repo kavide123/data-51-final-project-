@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Home - Appointment Tracker{% endblock %}
+
+{% block content %}
+<div class="text-center hero-section">
+    <h1 class="display-4"><i class="bi bi-calendar-check text-primary"></i> Appointment Tracker</h1>
+    <p class="lead text-muted mt-3">
+        A simple web application to manage and track appointments.
+        Built with <strong>Python</strong>, <strong>Flask</strong>, and <strong>MySQL</strong>.
+    </p>
+    <hr class="my-4">
+    <p class="mb-4">Use the navigation links below to manage your appointments.</p>
+
+    <div class="row justify-content-center g-4">
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 card-hover">
+                <div class="card-body text-center">
+                    <i class="bi bi-list-ul display-4 text-primary"></i>
+                    <h5 class="card-title mt-3">View Appointments</h5>
+                    <p class="card-text">See all scheduled, completed, and cancelled appointments.</p>
+                    <a href="{{ url_for('view_appointments') }}" class="btn btn-primary">View All</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 card-hover">
+                <div class="card-body text-center">
+                    <i class="bi bi-plus-circle display-4 text-success"></i>
+                    <h5 class="card-title mt-3">Add Appointment</h5>
+                    <p class="card-text">Schedule a new appointment by filling out a simple form.</p>
+                    <a href="{{ url_for('add_appointment') }}" class="btn btn-success">Add New</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card shadow-sm h-100 card-hover">
+                <div class="card-body text-center">
+                    <i class="bi bi-search display-4 text-info"></i>
+                    <h5 class="card-title mt-3">Search Appointments</h5>
+                    <p class="card-text">Find appointments by patient name, doctor, or date.</p>
+                    <a href="{{ url_for('search_appointments') }}" class="btn btn-info text-white">Search</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
